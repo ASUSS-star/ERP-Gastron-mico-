@@ -1,6 +1,10 @@
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
+/**
+ * Protege rutas en el frontend. OJO: esto es sólo UX;
+ * la seguridad real la aplica el backend con JWT + roles.
+ */
 
 export default function RutaProtegida({ roles, children }) {
   const { usuario, cargando } = useAuth();
